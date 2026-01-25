@@ -1,0 +1,66 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <style>
+      .circuit { stroke: #30363d; stroke-width: 2; fill: none; }
+      .node { fill: #58a6ff; }
+      .pulse { fill: #58a6ff; animation: pulse 3s infinite ease-in-out; }
+      .line-active { stroke: #58a6ff; stroke-width: 2; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 5s linear infinite; filter: url(#glow); }
+      .text { font-family: 'Segoe UI', sans-serif; fill: #c9d1d9; font-weight: bold; font-size: 24px; text-anchor: middle; }
+      .subtext { font-family: 'Segoe UI', sans-serif; fill: #8b949e; font-size: 14px; text-anchor: middle; }
+      
+      @keyframes pulse {
+        0% { r: 2; opacity: 0.5; }
+        50% { r: 5; opacity: 1; }
+        100% { r: 2; opacity: 0.5; }
+      }
+      
+      @keyframes dash {
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#grad)" />
+
+  <!-- Circuit Lines Background -->
+  <path class="circuit" d="M100 50 H 200 V 100 H 300" opacity="0.3" />
+  <path class="circuit" d="M600 250 H 500 V 200 H 400" opacity="0.3" />
+  <path class="circuit" d="M50 200 H 150 V 250" opacity="0.3" />
+  <path class="circuit" d="M750 50 H 650 V 100" opacity="0.3" />
+
+  <!-- Active Glowing Lines -->
+  <path class="line-active" d="M0 150 H 800" opacity="0.5" stroke-width="1" />
+  <path class="line-active" d="M100 300 V 150 L 200 50" style="animation-delay: 1s;" />
+  <path class="line-active" d="M700 0 V 150 L 600 250" style="animation-delay: 2s;" />
+
+  <!-- Nodes/Dots -->
+  <circle cx="200" cy="50" r="3" class="node" />
+  <circle cx="600" cy="250" r="3" class="node" />
+  <circle cx="400" cy="150" r="4" class="pulse" />
+  
+  <circle cx="100" cy="150" r="2" class="node" opacity="0.5" />
+  <circle cx="700" cy="150" r="2" class="node" opacity="0.5" />
+
+  <!-- Central Tech Hexagon Decor -->
+  <path d="M370 150 L385 125 H415 L430 150 L415 175 H385 Z" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
+  
+  <!-- Text -->
+  <text x="400" y="140" class="text" dy="-20">WELCOME TO MY PROFILE</text>
+  <text x="400" y="160" class="subtext" dy="20">Coding the Future • Building Dreams</text>
+
+</svg>
