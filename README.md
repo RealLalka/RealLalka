@@ -1,25 +1,15 @@
-# 🚀 Инфа всякая 🚀
+# Инфа всякая 
 Тут всякое собрание моей полу-профессиональной или любительской деятельности. А так-же мой рабочий стек:
-## 🛠️ Навыки и Технологии 🛠️
 ### prog
-- 🌐 **Веб-разработка:** HTML, CSS, JavaScript
-- ✨ **Фреймворки (Frontend):** React, Next.js
-- 🐍 **Языки программирования:** Python, C++
-- 🏗️ **Фреймворки (Python):** Flask
-- 🐙 **Системы контроля версий:** Git
-- 🔌 **Аппаратные платформы:** Arduino
-- ⚙️ **Администрирование:** Sysadmin, Nginx
-- 🗄️ **Базы данных:** PostgreSQL, SQLite
-- 🐳 **Контейнеризация:** Docker
-- 📊 **Аналитика:** Google Data Studio
+HTML, CSS, JavaScript, React, Vite, Next.js
+Git
+Arduino
+Apache, Nginx
+PostgreSQL, SQLite, 
+Docker
 ### design
-- 🖌️ Figma
-- 🖼️ Adobe Photoshop
-- ✏️ Illustrator
-- 🎬 Vegas Pro
+Figma, Adobe Photoshop, Illustrator, Vegas Pro
 ### ai
-- 💡 Stable Diffusion
-- 🤖 Ollama
+Stable Diffusion, Ollama, Gemini
 ### sys
-- 💻 **Рабочее:** Windows, Arch Linux, Ubuntu
-- ☁️ **Серверное:** Windows Server, CentOS
+Windows, Arch Linux, Ubuntu; Windows Server, CentOS
