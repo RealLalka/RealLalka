@@ -1,0 +1,136 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Elegant Night Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0518;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1f1135;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#321a4d;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Deep Mushroom Cap Gradient -->
+    <radialGradient id="capGrad" cx="30%" cy="30%" r="90%">
+      <stop offset="0%" style="stop-color:#ff8a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#990033;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      /* Changed to a serif italic font for elegance */
+      .text-title { 
+        font-family: 'Georgia', 'Times New Roman', serif; 
+        font-style: italic;
+        fill: #fff; 
+        font-size: 42px; 
+        text-anchor: middle; 
+        filter: url(#glow);
+        opacity: 0.9;
+        animation: pulseText 4s infinite ease-in-out;
+      }
+      
+      .spore { fill: #fff; opacity: 0; animation: float 6s infinite ease-in-out; }
+      .spore:nth-child(odd) { animation-duration: 7s; animation-delay: 0s; fill: #ffd1dc; }
+      .spore:nth-child(even) { animation-duration: 9s; animation-delay: 2s; fill: #e0f7fa; }
+
+      /* Slower, more gentle sway */
+      .mushroom-sway { animation: sway 6s infinite ease-in-out; transform-origin: bottom center; }
+      
+      .grass { fill: #11051b; }
+      .star { fill: #fff; animation: twinkle 4s infinite ease-in-out; }
+
+      @keyframes float {
+        0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+        20% { opacity: 0.6; }
+        80% { opacity: 0.6; }
+        100% { transform: translateY(-60px) translateX(20px); opacity: 0; }
+      }
+
+      @keyframes sway {
+        0%, 100% { transform: rotate(-2deg); }
+        50% { transform: rotate(2deg); }
+      }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 0.8; transform: scale(1.2); }
+      }
+      
+      @keyframes pulseText {
+        0%, 100% { opacity: 0.8; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+        50% { opacity: 1; text-shadow: 0 0 20px rgba(255,255,255,0.6); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Sky -->
+  <rect width="800" height="300" fill="url(#skyGrad)" />
+
+  <!-- Moon (More subtle) -->
+  <circle cx="720" cy="50" r="30" fill="#fff" opacity="0.1" />
+  <circle cx="715" cy="45" r="25" fill="#fff" opacity="0.05" />
+
+  <!-- Stars with twinkling -->
+  <g id="stars">
+      <circle cx="100" cy="50" r="1.5" class="star" style="animation-delay: 0s;" />
+      <circle cx="300" cy="90" r="1" class="star" style="animation-delay: 1s;" />
+      <circle cx="500" cy="40" r="1.2" class="star" style="animation-delay: 2s;" />
+      <circle cx="650" cy="120" r="1" class="star" style="animation-delay: 0.5s;" />
+      <circle cx="50" cy="150" r="1" class="star" style="animation-delay: 1.5s;" />
+  </g>
+
+  <!-- Ground / Silhouettes -->
+  <path d="M0,260 Q200,250 400,270 T800,260 V300 H0 Z" class="grass" opacity="0.8" />
+  <path d="M0,280 Q300,270 500,290 T800,280 V300 H0 Z" class="grass" />
+  
+  <!-- Magic Spores Particles (More delicate) -->
+  <g id="particles">
+      <circle cx="200" cy="270" r="1.5" class="spore" />
+      <circle cx="350" cy="280" r="1" class="spore" />
+      <circle cx="600" cy="270" r="1.5" class="spore" />
+      <circle cx="500" cy="290" r="1" class="spore" />
+      <circle cx="150" cy="280" r="1" class="spore" />
+      <circle cx="700" cy="280" r="1.5" class="spore" />
+      <circle cx="450" cy="250" r="1" class="spore" />
+  </g>
+
+  <!-- Mushroom Group Left -->
+  <g transform="translate(180, 275) scale(0.7)" class="mushroom-sway">
+    <!-- Stem (Slender) -->
+    <path d="M-8,0 Q-5,-60 -2,-70 H2 Q5,-60 8,0 Z" fill="#f0e6fa" /> 
+    <!-- Cap (Elegant shape) -->
+    <path d="M-40,-50 Q0,-100 40,-50 Q0,-60 -40,-50 Z" fill="url(#capGrad)" /> 
+    <!-- Dots (Smaller, scattered) -->
+    <circle cx="-20" cy="-65" r="3" fill="#fff" opacity="0.8"/>
+    <circle cx="15" cy="-75" r="4" fill="#fff" opacity="0.8"/>
+    <circle cx="10" cy="-60" r="2" fill="#fff" opacity="0.8"/>
+    <!-- Ring -->
+    <path d="M-8,-45 Q0,-35 8,-45" fill="none" stroke="#f0e6fa" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- Mushroom Group Right -->
+  <g transform="translate(620, 280) scale(0.55)" class="mushroom-sway" style="animation-delay: -2s;">
+    <path d="M-8,0 Q-5,-60 -2,-70 H2 Q5,-60 8,0 Z" fill="#f0e6fa" />
+    <path d="M-40,-50 Q0,-100 40,-50 Q0,-60 -40,-50 Z" fill="url(#capGrad)" />
+    <circle cx="0" cy="-80" r="4" fill="#fff" opacity="0.8"/>
+    <circle cx="-25" cy="-65" r="2.5" fill="#fff" opacity="0.8"/>
+    <circle cx="20" cy="-60" r="3" fill="#fff" opacity="0.8"/>
+    <path d="M-8,-45 Q0,-35 8,-45" fill="none" stroke="#f0e6fa" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- Small Mushroom Center-Left -->
+  <g transform="translate(300, 285) scale(0.3)" class="mushroom-sway" style="animation-delay: -1s;" opacity="0.9">
+    <path d="M-10,0 Q-5,-50 -3,-60 H3 Q5,-50 10,0 Z" fill="#f0e6fa" />
+    <path d="M-35,-40 Q0,-80 35,-40 Q0,-50 -35,-40 Z" fill="url(#capGrad)" />
+  </g>
+
+  <!-- Text Content -->
+  <text x="400" y="160" class="text-title">hello?...</text>
+  
+  <!-- Subtle foreground grass blades -->
+  <path d="M20,300 Q25,280 15,275 M140,300 Q145,285 155,280 M660,300 Q665,280 655,275" stroke="#251236" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+</svg>
