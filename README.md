@@ -1,5 +1,5 @@
-# Hi?...
 ![Header](header.svg)
+
 ## Tech Stack
 
 <p align="left">
