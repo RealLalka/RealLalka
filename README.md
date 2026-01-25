@@ -38,7 +38,11 @@
 ## GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=torvalds&show_icons=true&theme=tokyonight" height="180" alt="stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=torvalds&layout=compact&theme=tokyonight" height="180" alt="langs" />
+  <img src="https://github-readme-stats.vercel.app/api?username=RealLalka&show_icons=true&theme=tokyonight" height="180" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RealLalka&layout=compact&theme=tokyonight" height="180" alt="langs" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=RealLalka&theme=radical&no-frame=true&margin-w=15" alt="trophies" />
 </div>
 
