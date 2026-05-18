@@ -25,5 +25,12 @@
   <a href="https://t.me/RealLalka" target="_blank">
     <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
   </a>
+  <a href="https://ru.pinterest.com/2pickk/" target="_blank">
+    <img src="https://shields.io" alt="Pinterest" />
+  </a>
+  <a href="https://www.are.na/i4kellqk5um/channels" target="_blank">
+    <img src="https://shields.io" alt="Are.na" />
+  </a>
 </p>
+
 
